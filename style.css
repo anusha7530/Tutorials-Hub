@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Marck+Script&family=Playfair+Display&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #0e121d;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  header{
+    position: absolute;
+    top: 0;
+  }
+#navbar{
+    display: flex;
+    align-items: center;
+    top: 0px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+#logo img{
+    height: 7vh;
+    width: 5vw;
+}
+#logo p{
+    text-align: center;
+    color: #F08080;
+    font-weight: bold;
+}
+#navbar ul{
+    display: flex;
+    justify-content: space-between;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    display: inline-block;
+    margin: 10px 20px;
+    transition: transform 0.5s;
+}
+#navbar ul li a{
+    border-radius: 20px; 
+    color: #c8c8c8; 
+    text-decoration: none;
+}
+#navbar ul li:hover{
+    transform: translateY(-5px);
+}
+#navbar ul li a:hover{
+    color: 	#F08080;
+}
+
+.right{
+    display: flex;
+}
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+form.search button {
+    float: left;
+    width: 18%;
+    padding: 10px;
+    background: #F08080;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+form.search button:hover {
+    background: #000000;
+  }
+  
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.btn{
+    padding: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #F08080;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background-color: #c6c6c6;
+}
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+
+/* -----------------Home----------------  */
+.slider{
+    position: relative;
+    width: 100%;
+}
+.myslider{
+    height: 100vh;
+    display: none;
+    overflow: hidden;
+}
+.prev,.next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: #F08080;
+    transition: 0.1s;
+    user-select: none;
+}
+.prev:hover,.next:hover{
+    color: #c6c6c6;
+}
+.next{
+    right: 0;
+}
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 100px;
+    cursor: pointer;
+}
+.dot{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.active, dot:hover{
+    background-color: #F08080;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade ;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade{
+    from{opacity: 0.8}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from{opacity: 0.8}
+    to {opacity: 1}
+}
+.txt {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    font-family: 'Playfair Display', serif;
+    -webkit-animation-name: posi;
+    -webkit-animation-duration: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+.txt h1{
+    font-size: 4rem;
+    color: #F08080;
+    /* filter : drop-shadow(18px 15px 4px black); */
+}
+.txt p{
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Marck Script', cursive;
+}
+@-webkit-keyframes posi {
+    from{left: 25%}
+    to {left: 15%}
+}
+@keyframes posi {
+    from{left: 35%}
+    to {left: 25%}
+}
+.myslider img{
+    transform: scale(1.5,1.5);
+    -webkit-animation-name: zoomin;
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+    from{transform: scale(1,1)}
+    to {transform: scale(1.5,1.5)}
+}
+@keyframes zoomin {
+    from{transform: scale(1,1)}
+    to {transform: scale(1.5,1.5)}
+}
+
+/* ----------ABOUT---------  */
+#about{  
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+#about h1{
+    font-size: 3.4rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #F08080;
+    display: block;
+    margin: auto;
+}
+
+#container1{
+    height: 50vh;
+    margin-top: 20px;
+    display: flex;
+    background: url(img/About-us-Corporate-Profile.jpg);
+    background-size: cover;
+    text-align: left;
+}
+#container1 p{
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 22px 40px;
+    font-family: cursive;
+    font-weight: 600;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+/* -------services-----  */
+#services{  
+    padding: 3rem;
+}
+#services h1{
+    font-size: 3.4rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #F08080;
+    display: block;
+    margin: auto;
+}
+
+#services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+#services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+#services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+#services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+#services-list div p{
+    font-size: 17px;
+}
+#services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+    display: inline-block;
+}
+#services-list div:hover{
+    background: #F08080;
+    transform: translateY(-10px);
+    color: black;
+}
+#services button{
+    margin: 40px 0;
+    width: 250px;
+}
+#services button a{
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+#services button a i{
+    padding-left: 6px;
+}
+
+
+
+ /* ------------contact--------------  */
+ #contact{
+    padding: 10px 10%;
+ }
+ .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 3.4rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #F08080;
+    cursor: pointer;
+}
+
+.contact-left p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+.contact-left p i{
+    color: #F08080;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.contact-right form{
+    width: 100%;
+}
+#contact form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#contact button{
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    width: 200px;
+}
+
+
+footer{
+    margin-top: 30px; 
+    background: #262626;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    font-family: 'Young Serif', serif;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+footer a{
+    color: white;
+    padding: 10px;
+    transition: color 0.5s;
+}
+footer a:hover{
+    color: #F08080;
+}
+
+
+
+
+
+
+@media screen and (max-width:800px){
+    .myslider{
+        height: 500px;
+    }
+    .txt{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2s;
+        animation-name: posi2;
+        animation-duration: 2s;
+    }
+    .txt h1{
+        font-size: 50px;
+    }
+    @-webkit-keyframes posi2 {
+        from{left: 35%}
+        to {left: 50%}
+    }
+    @keyframes posi2 {
+        from{left: 35%}
+        to {left: 50%}
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    #container1 p{
+        font-size: 0.9rem;
+    }
+    .right form{
+        display: none;
+    }
+    #navbar ul li{
+        font-size: 1rem;
+        margin: 8px 10px;
+    }
+    #logo img{
+        width: 50px;
+    }
+}
+@media screen and (max-width:1200px){
+    #container1 p{
+        width: 73%;
+    }
+}
+@media screen and (max-width:500px){
+    #container1 p{
+        font-size: 0.8rem;
+    }
+    #container1{
+        height: 400px;
+    }
+}
+@media screen and (max-width:350px){
+    .txt h1{
+        font-size: 35px;
+    }
+    .txt p{
+        font-size: 20px;
+    }
+}

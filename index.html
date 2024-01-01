@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorials Hub</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <script src="https://kit.fontawesome.com/12d884e548.js" crossorigin="anonymous"></script>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="img/logo.png" alt="thub.com" />
+        <p>Thub</p>
+      </div>
+      <div>
+        <ul>
+          <li class="item"><a href="#home">Home</a></li>
+          <li class="item"><a href="#about">About</a></li>
+          <li class="item"><a href="#services">Services</a></li>
+          <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <form class="search" action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search2" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <button class="btn"><a href="./Pages/signup.html">Sign up</a></button>
+      </div>
+    </nav>
+
+    <!-- --------home--------  -->
+    <section id="home">
+        <div class="slider">
+          <div class="myslider fade">
+            <div class="txt">
+              <h1>Welcome to TutorialsHub</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam neque
+              </p>
+            </div>
+            <img src="img/bg1.png" alt="" style="width: 100%; height: 100%" />
+          </div>
+          <div class="myslider fade" style="display: block;">
+            <div class="txt">
+              <h1 style="color: black;">Learn to Code</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur,
+                ut!
+              </p>
+            </div>
+            <img src="img/bg2.jpg" alt="" style="width: 100%; height: 100%" />
+          </div>
+        
+          <div class="myslider fade">
+            <div class="txt">
+              <h1 style="color: white;">One Stop Learning</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur,
+                ut!
+              </p>
+            </div>
+            <img src="img/bg3.png" alt="" style="width: 100%; height: 100%" />
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="dotsbox" style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+    </section>
+
+    <section id="about">
+      <h1>ABOUT US</h1>
+      <div id="container1">
+          <p class="content">
+            Our mission is to empower individuals like you to explore the
+            fascinating world of coding, offering comprehensive tutorials,
+            resources, and guidance for a wide range of programming
+            languages.Your go-to destination for learning and mastering
+            different programming languages. We've created a hub that brings
+            together the programming community. Whether you're a beginner or an
+            experienced developer, our platform is designed to meet your
+            learning needs.
+          </p>
+      </div>
+    </section>
+
+    
+    <section id="services">
+      <h1>OUR SERVICES</h1>
+      <div id="services-list">
+        <div>
+          <i class="fa-solid fa-book"></i>
+          <h2>Curated Learning Resources</h2>
+          <p>We curate and compile the
+            best programming language tutorials from across the web, ensuring you
+            have easy access to high-quality content.</p>
+          <a href="">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-laptop-file"></i>
+          <h2>Diverse Learning Formats</h2>
+          <p>Access tutorials in various
+            formats, including written articles, video lessons, interactive coding
+            challenges, and more.</p>
+          <a href="">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-chalkboard"></i>
+          <h2>One-Stop Learning</h2>
+          <p>Find tutorials for a wide range of
+            programming languages, all in one place. No need to search multiple
+            sites—we've got you covered.</p>
+          <a href="">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-square-check"></i>
+          <h2>Verified Sources</h2>
+          <p>We only include tutorials from
+            trusted sources, ensuring accuracy and reliability in your learning
+            journey.</p>
+          <a href="">Learn More</a>
+        </div>
+      </div>
+      <button class="btn "><a href="./Pages/tutorials.html">Available Tutorials<i class="fa-solid fa-circle-arrow-right"></i></a></button>
+    </section>
+
+
+
+
+    <section id="contact">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Get in Touch</h1>
+            <p><i class="fa-solid fa-envelope"></i>tutorialsHub@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>(+91)9876-123-456</p>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet" autocomplete="off">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email Address"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="3"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">
+                <i class="fa-solid fa-paper-plane"></i>Send Message
+              </button>
+            </form>
+            <span id="msg"></span>
+          </div>
+          </div>
+      </section>
+   
+    <footer>
+      <div class="social-icons">
+        <a href=""
+          ><i class="fa-brands fa-facebook"></i></a>
+        <a href=""
+          ><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+      </div>
+      <a href="#home">Home</a>|
+      <a href="">Privacy Policy</a>|
+      <a href="">Security</a>
+      <div class="center">
+        Copyright &copy; www.tutorialsHub.com | All rights reserved!
+      </div>
+    </footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

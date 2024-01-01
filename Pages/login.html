@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorials Hub</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  </head>
+  <link rel="stylesheet" href="signup.css" />
+  <script src="https://kit.fontawesome.com/12d884e548.js" crossorigin="anonymous"></script>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="../img/logo.png" alt="logo" id="logo" />
+        <h1>Welcome back to TutorialsHub</h1>
+        <p>Enter your credentials and start learning!</p>
+        <p id="change">Not yet registered? <a href="signup.html">Sign Up</a></p>
+        <div>
+        <i class="fa-solid fa-backward"></i>
+        <a href="../index.html">Home</a>
+       </div>
+      </div>
+      <div class="right">
+        <div class="login">
+          <h1>Login</h1>
+          <p>Please enter the valid credentials</p>
+          <form method="post">
+            <fieldset>
+              <label for="first-name"
+                >Enter the Username:
+                <input
+                  id="first-name"
+                  name="first-name"
+                  type="text"
+                  required
+                  autocomplete="off"
+              /></label>
+              <label for="new-password"
+                >Enter the Password:
+                <input
+                  id="new-password"
+                  name="new-password"
+                  type="password"
+                  pattern="[a-z0-5]{8,}"
+                  required
+              /></label>
+            </fieldset>
+            <input type="submit" value="Login" />
+            <p class="log">Create new Account<a href="signup.html">Sign Up</a></p>
+            <div class="line"></div>
+
+                <div class="media-options">
+                  <div class="inner">
+                    <a href="https://in.linkedin.com/" class="field email">
+                      <i class="fa-brands fa-linkedin"></i>
+                        <span>Linkedin</span>
+                    </a>
+                  </div>
+                  <div class="inner">
+                    <a href="https://mail.google.com/mail/" class="field google">
+                      <i class="fa-brands fa-google"></i>
+                        <span>Google</span>
+                    </a>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
