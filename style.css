@@ -361,7 +361,10 @@ form.search::after {
     font-family: 'Baloo Bhaijaan 2', sans-serif;
     width: 200px;
 }
-
+#msg{
+    color: #61b752;
+    display: block;
+}
 
 footer{
     margin-top: 30px; 
