@@ -147,23 +147,25 @@
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet" autocomplete="off">
-              <input type="text" name="Name" placeholder="Your Name" required />
+              <input type="text" name="Name" placeholder="Your Name" required id="fname"/>
               <input
                 type="email"
                 name="Email"
                 placeholder="Email Address"
                 required
+                id="email"
               />
               <textarea
                 name="Message"
                 rows="3"
                 placeholder="Your Message"
+                id="message"
               ></textarea>
-              <button type="submit" class="btn btn2">
+               <span id="msg"></span>
+              <button type="submit" class="btn btn2" id="submit" onclick="sent()">
                 <i class="fa-solid fa-paper-plane"></i>Send Message
               </button>
             </form>
-            <span id="msg"></span>
           </div>
           </div>
       </section>
@@ -187,8 +189,9 @@
     </footer>
 
 
+<script type="module" src="./scripts/firebase.js"> </script>
+<script src="./scripts/script.js"></script>
 
 
-<script src="script.js"></script>
 </body>
 </html>
