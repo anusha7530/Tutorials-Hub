@@ -298,3 +298,53 @@ border-color: black;
         margin: 0 0;
     }
 }
+
+/* ---------------popup------------------  */
+.container#blur.active{
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+.popup{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  padding: 50px;
+  background-color: #0a0a23;
+  color: #f08080;
+  text-align: center;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.tick{
+  margin-top: -50px;
+  box-shadow: 0 2px 5px rgb(111, 80, 80);
+  border-radius: 50%;
+  color: rgb(121, 198, 7);
+  font-size: 60px;
+}
+.popup-btn{
+  width: 70%;
+  margin-top: 10px;
+  padding: 5px 0;
+  background: rgb(121, 198, 7);
+  color: #0a0a23;
+  outline: none;
+  border: 0;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgb(111, 80, 80);
+}
+#pop1.active, #pop2.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
