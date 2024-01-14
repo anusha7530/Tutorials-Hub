@@ -8,8 +8,9 @@
   </head>
   <link rel="stylesheet" href="signup.css" />
   <script src="https://kit.fontawesome.com/12d884e548.js" crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <body>
-    <div class="container">
+    <div class="container" id="blur>
       <div class="left">
         <img src="../img/logo.png" alt="logo" id="logo" />
         <h1>Welcome back to TutorialsHub</h1>
@@ -24,7 +25,7 @@
         <div class="login">
           <h1>Login</h1>
           <p>Please enter the valid credentials</p>
-          <form method="post">
+          <form method="post" id="login-form">
             <fieldset>
               <label for="first-name"
                 >Enter the Username:
@@ -35,17 +36,20 @@
                   required
                   autocomplete="off"
               /></label>
-              <label for="new-password"
+              <label for="email"
+                >Enter Your Email: <input id="login-email" name="email" type="email"
+                required autocomplete="off/></label
+              >
+              <label for="password"
                 >Enter the Password:
                 <input
-                  id="new-password"
-                  name="new-password"
+                  id="password"
+                  name="password"
                   type="password"
-                  pattern="[a-z0-5]{8,}"
                   required
               /></label>
             </fieldset>
-            <input type="submit" value="Login" />
+            <input type="submit" value="Login" id="login-btn" onclick="clean()"/>
             <p class="log">Create new Account<a href="signup.html">Sign Up</a></p>
             <div class="line"></div>
 
@@ -67,5 +71,75 @@
         </div>
       </div>
     </div>
+     <div class="alert hide alert1">
+      <span class="fas fa-exclamation-circle"></span>
+      <span class="err-msg">Error: Invalid credentials/User not Regitered!</span>
+      <span class="close-btn" onclick="closeAlert()">
+        <span class="fas fa-times" ></span>
+      </span>
+    </div>
+
+    <div class="alert alert2 hide">
+      <span class="fa-solid fa-circle-check"></span>
+      <span class="err-msg">You have been logged out successfully!</span>
+      <span class="close-btn" onclick="closeAlert()">
+        <span class="fas fa-times" ></span>
+      </span>
+    </div>
+
+    <div class="popup profile-data" id="pop1">
+      <div class="fa-solid fa-user profile"></div>
+      <h2 id="user" style="color: #0a0a23; font-size: 30px;"></h2>
+      <p id="user_bio"></p>
+      <span style="color: #0a0a23; font-weight: bold;">Email:</span><p id="user_email"></p>
+      <span style="color: #0a0a23; font-weight: bold;">Prefrences: </span><p id="user_prefrences" ></p>
+     <span style="color: #0a0a23; font-weight: bold;">Your unique id:</span> <p id="user_uid"></p>
+      <br>
+      <button type="button" class="popup-btn"><a href="../Pages/tutorials.html">Browse our tutorials</a></button>
+      <button type="button" class="popup-btn" id="logout" onclick="logoutAlert()"><i class="fa-solid fa-right-from-bracket"></i>  Logout</button>
+    </div>
+
+    <script type="module" src="../scripts/login.js"></script>
+
+
+    <script>
+        function errorAlert(){
+          $('.alert1').removeClass("hide");
+          $('.alert1').addClass("show");
+          $('.alert1').addClass("showAlert");
+          setTimeout(function(){
+            $('.alert1').removeClass("show");
+            $('.alert1').addClass("hide");
+          },5000);  
+      }
+      function logoutAlert(){
+          $('.alert2').removeClass("hide");
+          $('.alert2').addClass("show");
+          $('.alert2').addClass("showAlert");
+          setTimeout(function(){
+            $('.alert2').removeClass("show");
+            $('.alert2').addClass("hide");
+          },5000);  
+
+      }
+      function closeAlert(){
+        $('.alert').removeClass("show");
+        $('.alert').addClass("hide");
+      }
+
+      function toggle1(){
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active');
+      var popup = document.getElementById('pop1');
+      popup.classList.toggle('active');
+    }
+    function clean(){
+      document.getElementById("user").innerHTML =" ";
+      document.getElementById("user_bio").innerHTML =" ";
+      document.getElementById("user_email").innerHTML=" ";
+      document.getElementById("user_prefrences").innerHTML=" ";
+     document.getElementById("user_uid").innerHTML=" ";
+    }
+    </script>
   </body>
 </html>
