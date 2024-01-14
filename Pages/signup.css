@@ -402,7 +402,7 @@ border-color: black;
     transform: translateX(100%);
   }
 }
-.alert .fa-exclamation-circle,.fa-circle-check{
+.alert .fa-exclamation-circle,.alert .fa-circle-check{
   position: absolute;
   left: 20px;
   top: 50%;
