@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials | Tutorials Hub</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <script src="https://kit.fontawesome.com/12d884e548.js" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Marck+Script&family=Playfair+Display&family=Young+Serif&display=swap');
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image{
+            filter: blur(0.5rem);
+        }
+        .image >img {
+            height: 94vh;
+            width: 99vw;
+            opacity: 0.7;
+        }
+        .header_div::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            z-index: -1;
+            padding: 20px;
+            border-radius: 10px;  
+        }
+        .header_div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 400px;
+            color: rgb(196, 194, 194);
+        }
+        .header_div > h1{
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+            font-size: 40px;
+            margin-bottom: 0px;
+        }
+        .header_div > i {
+            font-size: 80px;
+        }
+        .header_div > p{
+            font-family: 'Baloo Bhaijaan 2', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .btn{
+            padding: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #F08080;
+            font-family: 'Baloo Bhaijaan 2', sans-serif;
+            transition: background-color 0.5s;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: #c6c6c6;
+        }
+        .btn a{
+            text-decoration: none;
+            color: black;
+        }
+        @media screen and (max-width: 450px) {
+            .header_div{
+                width: 200px;
+            }
+        }
+
+    </style>
+  </head>
+</head>
+<body>
+    <div class="image">
+        <img src="../img/locked.png" alt="locked">
+    </div>
+    <div class="header_div">
+        <i class="fa-solid fa-lock"></i>
+        <h1>Restricted!</h1>
+        <p>Kindly <span>Sign Up</span> to get the access.</p>
+        <button class="btn"> <a href="./signup.html">Sign Up</a></button>
+    </div>
+</body>
+</html>
