@@ -386,22 +386,9 @@ border-color: black;
   }
 }
 .alert.hide{
-  animation: hide_slide 1s ease forwards;
+  display: none;
 }
-@keyframes hide_slide{
-  0%{
-    transform: translateX(-10px);
-  }
-  40%{
-    transform: translateX(0%);
-  }
-  80%{
-    transform: translateX(-10%);
-  }
-  100%{
-    transform: translateX(100%);
-  }
-}
+
 .alert .fa-exclamation-circle,.alert .fa-circle-check{
   position: absolute;
   left: 20px;
